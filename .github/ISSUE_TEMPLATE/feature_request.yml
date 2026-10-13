@@ -1,0 +1,10 @@
+name: Feature request
+description: Suggest an improvement to the revival project.
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: Proposed improvement
+      description: Describe the player or contributor problem and your suggested behavior.
+    validations:
+      required: true

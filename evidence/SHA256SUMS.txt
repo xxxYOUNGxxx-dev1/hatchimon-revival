@@ -1,0 +1,2 @@
+16b3748c3e3c3d5d72b92c9db00395030e6028df9a9ccb37254af326d6855a36  Merge-Hatchimon-Dev5-ARM32.apk
+cf8b11b9ebbf88e4020cf8cf8e648752760b70f11cf724124f803fcdda35729d  Merge-Hatchimon-Dev5-ARM64.apk

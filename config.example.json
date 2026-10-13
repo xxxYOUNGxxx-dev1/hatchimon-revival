@@ -1,0 +1,8 @@
+{
+  "java_bin": "",
+  "zig": "zig",
+  "tools_dir": "tools",
+  "base_apk": "inputs/base.apk",
+  "runtime_apk": "inputs/ZettaBridge-0.1.0.apk",
+  "keystore": ".local/hatchimon-debug.jks"
+}

@@ -1,0 +1,28 @@
+# Private inputs and generated data
+/inputs/
+/tools/
+/.local/
+/.work/
+/output/
+/config.json
+/device-debug/
+/evidence/local-device-verification.json
+/publish-files.json
+.venv/
+__pycache__/
+*.pyc
+*.apk
+*.apk.idsig
+*.aab
+*.dex
+*.class
+*.so
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.tar
+*.log
+# APK downloads belong in GitHub Releases, not source commits.

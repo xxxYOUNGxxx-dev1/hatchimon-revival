@@ -1,0 +1,23 @@
+name: Source checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  patches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_patches.py
+      - run: python -m compileall -q scripts tests
+      - name: Reject private build artifacts
+        run: |
+          python - <<'PY'
+          import subprocess
+          from pathlib import PurePosixPath
+          files = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+          forbidden = {'.apk', '.jks', '.keystore', '.key', '.pem', '.p12', '.tar', '.log'}
+          assert not [p for p in files if PurePosixPath(p).suffix in forbidden or p.startswith(('inputs/', '.local/', 'device-debug/'))]
+          PY

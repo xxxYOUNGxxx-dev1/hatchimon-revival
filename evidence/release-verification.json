@@ -1,0 +1,72 @@
+{
+  "checks": [
+    "guest ZIP CRC",
+    "guest unique ZIP entries",
+    "all original game assets unchanged",
+    "original game engine unchanged",
+    "guest bridge is real ARM32 ELF",
+    "guest menu packaged",
+    "wrapper ZIP CRC",
+    "wrapper unique ZIP entries",
+    "outer APK has only ARM64 installation ABI",
+    "translator is real AArch64 ELF",
+    "translator ELF load segments support 16 KiB alignment",
+    "translator binary unchanged from upstream release",
+    "upstream guest sysroot and proxy unchanged",
+    "bundled payload matches signed patched game",
+    "custom launcher packaged",
+    "no Cocos compile stub packaged",
+    "translator license packaged",
+    "signature/alignment verification: Merge-Hatchimon-Dev5-ARM32.apk",
+    "signature/alignment verification: Merge-Hatchimon-Dev5-ARM64.apk"
+  ],
+  "original": {
+    "sha256": "1fe20856f392f46fd2474606749f7789ebe7ff026a26ee8e294e2d2d35b860dc",
+    "filename": "base.apk"
+  },
+  "artifacts": [
+    {
+      "sha256": "16b3748c3e3c3d5d72b92c9db00395030e6028df9a9ccb37254af326d6855a36",
+      "bytes": 29906084,
+      "filename": "Merge-Hatchimon-Dev5-ARM32.apk"
+    },
+    {
+      "sha256": "cf8b11b9ebbf88e4020cf8cf8e648752760b70f11cf724124f803fcdda35729d",
+      "bytes": 35465713,
+      "filename": "Merge-Hatchimon-Dev5-ARM64.apk"
+    }
+  ],
+  "game_assets_preserved": 358,
+  "wrapper_kind": "ARM64 host translating an unchanged ARM32 game engine",
+  "device_runtime_test": {
+    "installed_apk_sha256": "cf8b11b9ebbf88e4020cf8cf8e648752760b70f11cf724124f803fcdda35729d",
+    "device_model": "26077PC53G",
+    "android_release": "16",
+    "api": 36,
+    "abi": "arm64-v8a",
+    "page_size": 4096,
+    "version": "1.13-dev5-zb0.1.0",
+    "observed_checks": [
+      "cold launch to title and farm",
+      "tutorial interaction, hatching and evolution",
+      "DEV grants of 1000000000 for gold, Cash and ruby",
+      "gold clamp at 2000000000",
+      "spawn rank37 and rank72 with original glow",
+      "battle with extended-rank monsters and return to farm",
+      "progress survives force-stop and relaunch",
+      "progress survives upgrade/reimport from dev4 to dev5",
+      "foreground/background resume"
+    ],
+    "final_cold_process_fatal_errors": 0,
+    "vungle_receiver_error_in_final_process": false,
+    "limits": [
+      "sound engine/AudioTrack observed in logs; no listening test",
+      "not a full playthrough of every location",
+      "no real-money purchases tested",
+      "no long load/stress test"
+    ]
+  },
+  "spawn_levels": "1..72 (24 tiers x 3 forms); 37..72 use original glow behavior",
+  "maximum_grant": 1000000000,
+  "maximum_balance": 2000000000
+}
